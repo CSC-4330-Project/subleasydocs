@@ -21,8 +21,8 @@
 title: Subleasy Documentation
 # description: >- # this means to ignore newlines until "baseurl:"
 #   This is the official documentation site for Subleasy! 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/subleasydocs" # the subpath of your site, e.g. /blog
+url: "https://csc-4330-project.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima

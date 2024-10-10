@@ -39,6 +39,7 @@ layout: page
 - Feature branches are created off the `dev` branch.
 - They are used for developing new features or making significant changes.
 - Naming convention: `feature/[feature-name]`
+   - Ex: `feature/login-feature`
 
 ### Workflow
 

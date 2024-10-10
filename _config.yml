@@ -9,6 +9,18 @@ theme: minima
 plugins:
   - jekyll-feed
 
+
+# Specify additional CSS files to include
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# List of CSS files to include
+css_files:
+  - "assets/css/main.css"
+  - "assets/css/main.css.map"
+
+
 #
 # exclude:
 #   - .sass-cache/

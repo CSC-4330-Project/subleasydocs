@@ -1,5 +1,3 @@
-
-
 # **HomePage**
 
 ## **Constructor**

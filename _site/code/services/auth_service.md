@@ -1,55 +1,90 @@
-## Class: AuthService
+# AuthService Class Documentation
 
-#### Methods:
+The `AuthService` class provides authentication functionality for a Flutter application using Firebase Authentication and Firestore. Below is a detailed documentation of its methods:
 
-1. `signUp`
-   - Parameters:
-     - `email` (String): User's email address
-     - `password` (String): User's password
-     - `firstName` (String): User's first name
-     - `lastName` (String): User's last name
-   - Returns: `Future<UserCredential>`
-   - Description: Creates a new user account with the provided email and password, then stores additional user information in Firestore.
+## signUp
 
-2. `storeUserData`
-   - Parameters:
-     - `userID` (String): The unique identifier for the user
-     - `firstName` (String): User's first name
-     - `lastName` (String): User's last name
-     - `email` (String): User's email address
-   - Returns: `Future<void>`
-   - Description: Stores the user's information in the Firestore 'users' collection.
+**Function Name:** signUp
+**Parameters:**
+- user (Users): An object of the Users class containing user information
 
-3. `signIn`
-   - Parameters:
-     - `email` (String): User's email address
-     - `password` (String): User's password
-   - Returns: `Future<UserCredential>`
-   - Description: Signs in a user with the provided email and password.
+**Return Type:** Future<UserCredential>
 
-4. `sendUserVerificationEmail`
-   - Parameters: None
-   - Returns: `Future<bool>`
-   - Description: Sends a verification email to the currently signed-in user.
+**Description:** 
+This function signs up a new user with email and password. It creates a new user account in Firebase Authentication and stores additional user data in Firestore.
 
-5. `signOut`
-   - Parameters: None
-   - Returns: `Future<void>`
-   - Description: Signs out the current user.
+## storeUserData
 
-6. `getCurrentUser`
-   - Parameters: None
-   - Returns: `User?`
-   - Description: Returns the currently signed-in user or null if no user is signed in.
+**Function Name:** storeUserData
+**Parameters:**
+- userID (String): The unique identifier of the user
+- user (Users): An object of the Users class containing user information
 
-7. `sendPasswordResetEmail`
-   - Parameters:
-     - `email` (String): The email address to send the password reset link to
-   - Returns: `Future<void>`
-   - Description: Sends a password reset email to the specified email address.
+**Return Type:** Future<void>
 
-8. `handleFirebaseAuthException`
-   - Parameters:
-     - `e` (FirebaseAuthException): The exception thrown by Firebase Authentication
-   - Returns: `String`
-   - Description: Translates Firebase Auth exceptions into user-friendly error messages.
+**Description:** 
+This function stores additional user data in Firestore after successful authentication.
+
+## signIn
+
+**Function Name:** signIn
+**Parameters:**
+- email (String): The user's email address
+- password (String): The user's password
+
+**Return Type:** Future<UserCredential>
+
+**Description:** 
+This function signs in an existing user with their email and password.
+
+## sendUserVerificationEmail
+
+**Function Name:** sendUserVerificationEmail
+**Parameters:** None
+
+**Return Type:** Future<bool>
+
+**Description:** 
+This function sends a verification email to the current user's email address.
+
+## signOut
+
+**Function Name:** signOut
+**Parameters:** None
+
+**Return Type:** Future<void>
+
+**Description:** 
+This function signs out the current user.
+
+## getCurrentUser
+
+**Function Name:** getCurrentUser
+**Parameters:** None
+
+**Return Type:** User?
+
+**Description:** 
+This function returns the currently signed-in user or null if no user is signed in.
+
+## sendPasswordResetEmail
+
+**Function Name:** sendPasswordResetEmail
+**Parameters:**
+- email (String): The email address of the user requesting a password reset
+
+**Return Type:** Future<void>
+
+**Description:** 
+This function sends a password reset email to the specified email address.
+
+## handleFirebaseAuthException
+
+**Function Name:** handleFirebaseAuthException
+**Parameters:**
+- e (FirebaseAuthException): The Firebase authentication exception to handle
+
+**Return Type:** String
+
+**Description:** 
+This function handles various Firebase authentication exceptions and returns appropriate error messages.

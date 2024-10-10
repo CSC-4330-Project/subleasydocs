@@ -56,3 +56,5 @@ ElevatedButton(
   child: Text('Sign Out'),
 ),
 ```
+
+The view model should be provided with an instance of `AuthService` when created, and can be used with `ChangeNotifierProvider` for state management in the widget tree.

@@ -1,5 +1,4 @@
 
-
 # **AnimatedPage**
 
 ## **Constructor**
@@ -19,7 +18,6 @@ AnimatedPage is an abstract class that extends StatelessWidget. It provides a ba
 
 **What it does:**
 The build method constructs and returns an AnimatedSwitcher widget with the specified duration and child. This allows for animated transitions when the child widget changes.
-
 
 # **FadeSlideInPage**
 

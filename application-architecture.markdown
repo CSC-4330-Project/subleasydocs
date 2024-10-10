@@ -54,6 +54,12 @@ The `assets` directory stores static resources like images and fonts used in the
 
 Our app follows the MVVM (Model-View-ViewModel) architecture:
 
+<div style="text-align: center;">
+    <img src="{{site.baseurl}}/assets/MVVM.jpg" alt="Subleasy" width="400" >
+</div>
+
+<br>
+
 - **Model**: Represents the data and business logic of the application. In our case, this involves the Firestore data model and local data models.
 - **View**: Represents the UI of the application. In Flutter, this is typically a Widget.
 - **ViewModel**: Acts as a bridge between the Model and the View. It handles the presentation logic and state management for the View.
@@ -80,10 +86,10 @@ Our Firestore database consists of a single collection:
 
 - **users**: Stores user information
   - Fields:
-    - first_name: String
-    - last_name: String
-    - email: String
-    - created_at: Timestamp
+    - first_name: `String`
+    - last_name: `String`
+    - email: `String`
+    - created_at: `Timestamp`
 
 ## 5. Naming Conventions
 

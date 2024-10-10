@@ -16,7 +16,76 @@ layout: page
 - **Backend:** Firebase
 - **Version Control:** Git
 
-## 3. Development Environment Setup
+
+## 3. Git Branching Strategy
+
+<div style="text-align: center;">
+    <img src="{{site.baseurl}}/assets/git.jpg" alt="git branching" width="600" >
+</div>
+
+<br>
+
+#### Master Branch
+- The `master` branch represents the main line of development.
+- It should always contain production-ready code.
+- Direct commits to `master` are generally not allowed.
+
+#### Development Branch
+- The `dev` branch is created off the `master` branch.
+- It serves as an integration branch for features.
+- All feature development should be merged into `dev` first.
+
+#### Feature Branches
+- Feature branches are created off the `dev` branch.
+- They are used for developing new features or making significant changes.
+- Naming convention: `feature/[feature-name]`
+
+### Workflow
+
+1. Create a new feature branch from `dev`:
+   ```
+   git checkout dev
+   git pull origin dev
+   git checkout -b feature/new-feature
+   ```
+
+2. Develop your feature in the feature branch.
+
+3. Once the feature is complete:
+   - Ensure all tests pass
+   - Update documentation if necessary
+
+4. Merge the feature branch into `dev`:
+   ```
+   git checkout dev
+   git pull origin dev
+   git merge --no-ff feature/new-feature
+   git push origin dev
+   ```
+
+5. Delete the feature branch (optional):
+   ```
+   git branch -d feature/new-feature
+   ```
+
+6. Periodically, `dev` will be merged into `master` for releases:
+   ```
+   git checkout master
+   git pull origin master
+   git merge --no-ff dev
+   git push origin master
+   ```
+
+### Best Practices
+
+- Keep feature branches short-lived and focused on a single feature or task.
+- Regularly pull changes from `dev` into your feature branch to stay up-to-date.
+- Use meaningful commit messages.
+- Consider using pull requests for code review before merging into `dev`.
+
+This branching strategy helps maintain a clean history and supports collaborative development while keeping the master branch stable.
+
+## 4. Development Environment Setup
 
 ### Flutter SDK Installation
 
@@ -49,7 +118,7 @@ layout: page
 3. Make an initial commit with the project structure.
 
 
-## 4. Code Style Guide
+## 5. Code Style Guide
 
 ### Naming Conventions
 
@@ -67,7 +136,7 @@ layout: page
 - Use `///` for documentation comments.
 - Write clear, concise comments explaining "why" rather than "what".
 
-## 5. Building and Running the App
+## 6. Building and Running the App
 
 ### Debug Build
 

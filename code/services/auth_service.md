@@ -2,7 +2,7 @@
 layout: page
 ---
 
-### Class: AuthService
+## Class: AuthService
 
 #### Methods:
 

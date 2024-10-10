@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Subleasy Documentation</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Subleasy Documentation" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/subleasydocs/application-architecture.html" />
+<meta property="og:url" content="http://localhost:4000/subleasydocs/application-architecture.html" />
+<meta property="og:site_name" content="Subleasy Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Subleasy Documentation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Subleasy Documentation","url":"http://localhost:4000/subleasydocs/application-architecture.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/subleasydocs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/subleasydocs/feed.xml" title="Subleasy Documentation" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/subleasydocs/">Subleasy Documentation</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/subleasydocs/about/">About</a><a class="page-link" href="/subleasydocs/code/">Code</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="subleasing-app-architecture-documentation">Subleasing App Architecture Documentation</h1>
+
+<h2 id="1-overview">1. Overview</h2>
+
+<p>This document outlines the architectural design of our Subleasing app. We follow the MVVM (Model-View-ViewModel) architecture pattern to ensure a clean separation of concerns and maintain a scalable, testable codebase.</p>
+
+<h2 id="2-directory-structure">2. Directory Structure</h2>
+
+<p>Our project’s main directory structure is organized as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lib/
+├── services/
+├── viewmodels/
+├── pages/
+├── components/
+├── models/
+├── utils/
+└── assets/
+</code></pre></div></div>
+
+<h3 id="21-services">2.1 Services</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">services</code> directory contains classes that handle external interactions and business logic. For example:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">auth_service.dart</code>: Manages authentication-related functions such as sign-in, sign-up, and password reset.</li>
+</ul>
+
+<h3 id="22-viewmodels">2.2 ViewModels</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">viewmodels</code> directory contains a separate ViewModel for each page in the application. ViewModels act as an intermediary between the Model (data) and the View (UI), handling the business logic and state management for each page.</p>
+
+<h3 id="23-pages">2.3 Pages</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">pages</code> directory contains the main screens of the application. Each page is associated with a corresponding ViewModel.</p>
+
+<h3 id="24-components">2.4 Components</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">components</code> directory houses reusable UI elements used throughout the app, such as custom buttons, text fields, and progress indicators.</p>
+
+<h3 id="25-models">2.5 Models</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">models</code> directory contains data models that represent the structure of our data, such as the <code class="language-plaintext highlighter-rouge">Users</code> model.</p>
+
+<h3 id="26-utils">2.6 Utils</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">utils</code> directory contains utility classes and constants used across the application, such as color schemes and validation functions.</p>
+
+<h3 id="27-assets">2.7 Assets</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">assets</code> directory stores static resources like images and fonts used in the application.</p>
+
+<h2 id="3-mvvm-architecture">3. MVVM Architecture</h2>
+
+<p>Our app follows the MVVM (Model-View-ViewModel) architecture:</p>
+
+<ul>
+  <li><strong>Model</strong>: Represents the data and business logic of the application. In our case, this involves the Firestore data model and local data models.</li>
+  <li><strong>View</strong>: Represents the UI of the application. In Flutter, this is typically a Widget.</li>
+  <li><strong>ViewModel</strong>: Acts as a bridge between the Model and the View. It handles the presentation logic and state management for the View.</li>
+</ul>
+
+<h2 id="4-data-model">4. Data Model</h2>
+
+<h3 id="41-local-data-models">4.1 Local Data Models</h3>
+
+<ul>
+  <li><strong>Users</strong>: Represents user information
+    <div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Users</span> <span class="p">{</span>
+  <span class="kd">final</span> <span class="kt">String</span> <span class="n">firstName</span><span class="p">;</span>
+  <span class="kd">final</span> <span class="kt">String</span> <span class="n">lastName</span><span class="p">;</span>
+  <span class="kd">final</span> <span class="kt">String</span> <span class="n">email</span><span class="p">;</span>
+  <span class="kd">final</span> <span class="kt">String</span> <span class="n">password</span><span class="p">;</span>
+
+  <span class="n">Users</span><span class="p">({</span><span class="kd">required</span> <span class="k">this</span><span class="o">.</span><span class="na">firstName</span><span class="p">,</span> <span class="kd">required</span> <span class="k">this</span><span class="o">.</span><span class="na">lastName</span><span class="p">,</span> <span class="kd">required</span> <span class="k">this</span><span class="o">.</span><span class="na">email</span><span class="p">,</span> <span class="kd">required</span> <span class="k">this</span><span class="o">.</span><span class="na">password</span><span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="42-firestore-structure">4.2 Firestore Structure</h3>
+
+<p>Our Firestore database consists of a single collection:</p>
+
+<ul>
+  <li><strong>users</strong>: Stores user information
+    <ul>
+      <li>Fields:
+        <ul>
+          <li>first_name: String</li>
+          <li>last_name: String</li>
+          <li>email: String</li>
+          <li>created_at: Timestamp</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="5-naming-conventions">5. Naming Conventions</h2>
+
+<p>We follow these naming conventions to maintain consistency across the project:</p>
+
+<ul>
+  <li>File names: snake_case (e.g., <code class="language-plaintext highlighter-rouge">auth_service.dart</code>)</li>
+  <li>Class names: PascalCase (e.g., <code class="language-plaintext highlighter-rouge">AuthService</code>)</li>
+  <li>Variables and functions: camelCase (e.g., <code class="language-plaintext highlighter-rouge">userEmail</code>)</li>
+  <li>Constants: SCREAMING_SNAKE_CASE (e.g., <code class="language-plaintext highlighter-rouge">PRIMARY_COLOR</code>)</li>
+</ul>
+
+<h2 id="6-navigation">6. Navigation</h2>
+
+<p>We use Flutter’s built-in navigation system:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Navigator</code> for managing the navigation stack</li>
+  <li><code class="language-plaintext highlighter-rouge">MaterialPageRoute</code> for defining routes between pages</li>
+</ul>
+
+<p>Navigation logic is kept in the View layer, with ViewModels communicating navigation needs through callbacks or streams.</p>
+
+<h2 id="7-state-management">7. State Management</h2>
+
+<p>We use a combination of state management techniques:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ChangeNotifier</code> for ViewModels to notify Views of state changes</li>
+  <li><code class="language-plaintext highlighter-rouge">Provider</code> for dependency injection and accessing ViewModels from Views</li>
+  <li>Local state management using <code class="language-plaintext highlighter-rouge">setState()</code> for simple UI state changes within widgets</li>
+</ul>
+
+<h2 id="8-authentication-flow">8. Authentication Flow</h2>
+
+<p>Our authentication flow includes:</p>
+
+<ol>
+  <li>Sign Up: Users can create a new account with email and password</li>
+  <li>Sign In: Existing users can sign in with their credentials</li>
+  <li>Password Reset: Users can request a password reset email</li>
+</ol>
+
+<p>The <code class="language-plaintext highlighter-rouge">AuthService</code> handles these operations, interacting with Firebase Authentication.</p>
+
+<h2 id="9-form-validation">9. Form Validation</h2>
+
+<p>Form validation is handled in the ViewModels, with validation logic for email and password fields. We use <code class="language-plaintext highlighter-rouge">FormKey</code> for structured form validation.</p>
+
+<h2 id="10-error-handling">10. Error Handling</h2>
+
+<p>Errors are caught in the ViewModels and communicated to the Views through error messages or dedicated error streams. Views are responsible for displaying error messages to the user.</p>
+
+<h2 id="11-animations">11. Animations</h2>
+
+<p>We use Flutter’s animation system to enhance the user experience:</p>
+
+<ul>
+  <li>Fade-in and slide animations for page transitions</li>
+  <li>Loading indicators for asynchronous operations</li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/subleasydocs/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Subleasy Documentation</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Subleasy Documentation</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -7,14 +7,14 @@
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Subleasy Documentation" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/subleasydocs/code/" />
-<meta property="og:url" content="http://localhost:4000/subleasydocs/code/" />
+<link rel="canonical" href="http://localhost:4000/subleasydocs/code/pages/auth_page.html" />
+<meta property="og:url" content="http://localhost:4000/subleasydocs/code/pages/auth_page.html" />
 <meta property="og:site_name" content="Subleasy Documentation" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Subleasy Documentation" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","headline":"Subleasy Documentation","url":"http://localhost:4000/subleasydocs/code/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"Subleasy Documentation","url":"http://localhost:4000/subleasydocs/code/pages/auth_page.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/subleasydocs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/subleasydocs/feed.xml" title="Subleasy Documentation" /></head>
 <body><header class="site-header" role="banner">
@@ -41,35 +41,41 @@
   </header>
 
   <div class="post-content">
-    <pre>
-lib/
-├── services/
-│   ├── <a href="/subleasydocs/code/services/auth_service">auth_service.dart</a>
-├── viewmodels/
-│   ├── <a href="/subleasydocs/code/viewmodels/login_view_model">login_view_model.dart</a>
-│   └── <a href="/subleasydocs/code/viewmodels/sign_up_view_model">sign_up_view_model.dart</a>
-│   ├── <a href="/subleasydocs/code/viewmodels/forgot_password_view_model">forgot_password_view_model.dart</a>
-│   └── <a href="/subleasydocs/code/viewmodels/verification_view_model">verification_view_model.dart</a>
-│   ├── <a href="/subleasydocs/code/viewmodels/home_view_model">home_view_model.dart</a>
-├── pages/
-│   ├── <a href="/subleasydocs/code/pages/home_page">home_page.dart</a>
-│   └── <a href="/subleasydocs/code/pages/profile_page">profile_page.dart</a>
-│   ├── <a href="/subleasydocs/code/pages/auth_page">auth_page.dart</a>
-│   └── <a href="/subleasydocs/code/pages/sign_up_page">sign_up_page.dart</a>
-│   ├── <a href="/subleasydocs/code/pages/verification_page">verification_page.dart</a>
-│   └── <a href="/subleasydocs/code/pages/forgot_password_page">forgot_password_page.dart</a>
-├── components/
-│   ├── <a href="/subleasydocs/code/components/custom_button">custom_button.dart</a>
-│   └── <a href="/subleasydocs/code/components/custom_card">custom_card.dart</a>
-│   ├── <a href="/subleasydocs/code/components/custom_button">custom_button.dart</a>
-│   └── <a href="/subleasydocs/code/components/custom_card">custom_card.dart</a>
-│   ├── <a href="/subleasydocs/code/components/custom_button">custom_button.dart</a>
-├── models/
-│   ├── <a href="/subleasydocs/code/models/users">users.dart</a>
-├── utils/
-│   ├── <a href="/subleasydocs/code/utils/constants">constants.dart</a>
-└── assets/
-</pre>
+    <h1 id="authpage"><strong>AuthPage</strong></h1>
+
+<h2 id="constructor"><strong>Constructor</strong></h2>
+<ul>
+  <li><strong>Name:</strong> AuthPage</li>
+  <li><strong>Parameters:</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">key</code> (Key?): The widget’s key</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>What it does:</strong>
+AuthPage is a StatelessWidget that serves as an authentication gate in the application. It determines whether to show the home page or the login page based on the user’s authentication state.</p>
+
+<h2 id="build"><strong>build</strong></h2>
+<ul>
+  <li><strong>Parameters:</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">context</code> (BuildContext): The build context</li>
+    </ul>
+  </li>
+  <li><strong>Return type:</strong> Widget</li>
+</ul>
+
+<p><strong>What it does:</strong>
+The build method constructs and returns a Scaffold widget containing a StreamBuilder. This setup allows for real-time updates based on the authentication state:</p>
+
+<ul>
+  <li>It listens to the <code class="language-plaintext highlighter-rouge">FirebaseAuth.instance.authStateChanges()</code> stream, which emits events whenever the user’s sign-in state changes.</li>
+  <li>If the snapshot has data (indicating a signed-in user), it returns the HomePage.</li>
+  <li>If the snapshot doesn’t have data (indicating no signed-in user), it returns the LoginPage.</li>
+</ul>
+
+<p>This approach provides a seamless transition between authenticated and non-authenticated states, automatically routing the user to the appropriate page based on their current authentication status.</p>
 
   </div>
 

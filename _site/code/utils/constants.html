@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Subleasy Documentation</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Subleasy Documentation" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/subleasydocs/code/utils/constants.html" />
+<meta property="og:url" content="http://localhost:4000/subleasydocs/code/utils/constants.html" />
+<meta property="og:site_name" content="Subleasy Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Subleasy Documentation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Subleasy Documentation","url":"http://localhost:4000/subleasydocs/code/utils/constants.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/subleasydocs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/subleasydocs/feed.xml" title="Subleasy Documentation" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/subleasydocs/">Subleasy Documentation</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/subleasydocs/about/">About</a><a class="page-link" href="/subleasydocs/code/">Code</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="comfortablecolors-class-documentation">ComfortableColors Class Documentation</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">ComfortableColors</code> class defines a set of color constants for use in a Flutter application. These colors create a warm, comfortable color scheme.</p>
+
+<h2 id="color-constants">Color Constants</h2>
+
+<p><strong><code class="language-plaintext highlighter-rouge">background</code></strong></p>
+<ul>
+  <li><strong>Value:</strong> <code class="language-plaintext highlighter-rouge">Color(0xFFF5E6D3)</code></li>
+  <li><strong>Description:</strong> A soft beige color intended for use as a background.</li>
+</ul>
+
+<p><strong><code class="language-plaintext highlighter-rouge">primary</code></strong></p>
+<ul>
+  <li><strong>Value:</strong> <code class="language-plaintext highlighter-rouge">Color(0xFF7D5A50)</code></li>
+  <li><strong>Description:</strong> A warm brown color, likely to be used as the primary color in the app’s color scheme.</li>
+</ul>
+
+<p><strong><code class="language-plaintext highlighter-rouge">secondary</code></strong></p>
+<ul>
+  <li><strong>Value:</strong> <code class="language-plaintext highlighter-rouge">Color(0xFFB4846C)</code></li>
+  <li><strong>Description:</strong> A soft terracotta color, intended as a secondary color in the app’s palette.</li>
+</ul>
+
+<p><strong><code class="language-plaintext highlighter-rouge">accent</code></strong></p>
+<ul>
+  <li><strong>Value:</strong> <code class="language-plaintext highlighter-rouge">Color(0xFFE5B299)</code></li>
+  <li><strong>Description:</strong> A peachy color to be used as an accent in the application.</li>
+</ul>
+
+<p><strong><code class="language-plaintext highlighter-rouge">text</code></strong></p>
+<ul>
+  <li><strong>Value:</strong> <code class="language-plaintext highlighter-rouge">Color(0xFF5D4037)</code></li>
+  <li><strong>Description:</strong> A dark brown color, intended for text elements in the app.</li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+
+<p>These color constants can be used throughout the application to maintain a consistent color scheme. For example:</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Container</span><span class="p">(</span>
+  <span class="nl">color:</span> <span class="n">ComfortableColors</span><span class="o">.</span><span class="na">background</span><span class="p">,</span>
+  <span class="nl">child:</span> <span class="n">Text</span><span class="p">(</span>
+    <span class="s">'Hello, World!'</span><span class="p">,</span>
+    <span class="nl">style:</span> <span class="n">TextStyle</span><span class="p">(</span><span class="nl">color:</span> <span class="n">ComfortableColors</span><span class="o">.</span><span class="na">text</span><span class="p">),</span>
+  <span class="p">),</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>This class provides a centralized location for color definitions, making it easier to maintain a consistent look and feel across the application.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/subleasydocs/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Subleasy Documentation</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Subleasy Documentation</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

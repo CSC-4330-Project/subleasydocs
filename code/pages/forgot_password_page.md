@@ -1,3 +1,5 @@
+# **ForgotPassword**
+
 ## **Constructor**
 - **Name:** ForgotPassword
 - **Parameters:**

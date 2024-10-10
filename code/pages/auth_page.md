@@ -1,3 +1,5 @@
+# **AuthPage**
+
 ## **Constructor**
 - **Name:** AuthPage
 - **Parameters:**

@@ -1,4 +1,4 @@
-
+# ForgotPasswordViewModel Documentation
 
 The `ForgotPasswordViewModel` class is responsible for managing the state and logic of the forgot password feature in a Flutter application. It extends `ChangeNotifier` for state management.
 

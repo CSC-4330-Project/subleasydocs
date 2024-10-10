@@ -1,11 +1,19 @@
 title: Subleasy Documentation
-baseurl: "/subleasydocs"
-url: "https://csc-4330-project.github.io"
+baseurl: "/subleasydocs"  # Ensure this matches your repository name.
+url: "https://csc-4330-project.github.io"  # This is your GitHub Pages base URL.
 theme: minima
+
+# Make sure the file exists and the name matches exactly, including the extension.
 header_pages:
   - index.markdown
+
 plugins:
   - jekyll-feed
+  - jekyll-sitemap  # Optional, useful for better indexing.
+
 sass:
   sass_dir: _sass
   style: compressed
+
+# Add these configurations to help with paths.
+relative_permalinks: true

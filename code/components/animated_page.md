@@ -1,7 +1,3 @@
-
-
-# **AnimatedPage**
-
 ## **Constructor**
 - **Name:** AnimatedPage
 - **Parameters:**

@@ -1,5 +1,3 @@
-
-
 # **VerificationPage**
 
 ## **Constructor**

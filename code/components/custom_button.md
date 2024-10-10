@@ -1,5 +1,3 @@
-# **CustomButton**
-
 ## **Constructor**
 - **Name:** CustomButton
 - **Parameters:**

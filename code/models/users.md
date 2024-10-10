@@ -1,5 +1,3 @@
-# **Users**
-
 ## **Constructor**
 - **Name:** Users
 - **Parameters:**

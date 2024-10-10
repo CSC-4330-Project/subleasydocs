@@ -1,7 +1,3 @@
-
-
-# **HomePage**
-
 ## **Constructor**
 - **Name:** HomePage
 - **Parameters:**

@@ -19,11 +19,11 @@ lib/
 │   ├── <a href="{{site.baseurl}}/code/pages/verification_page">verification_page.dart</a>
 │   └── <a href="{{site.baseurl}}/code/pages/forgot_password_page">forgot_password_page.dart</a>
 ├── components/
+│   ├── <a href="{{site.baseurl}}/code/components/animated_page">animated_page.dart</a>
+│   └── <a href="{{site.baseurl}}/code/components/custom_textfield">custom_textfield.dart</a>
 │   ├── <a href="{{site.baseurl}}/code/components/custom_button">custom_button.dart</a>
-│   └── <a href="{{site.baseurl}}/code/components/custom_card">custom_card.dart</a>
-│   ├── <a href="{{site.baseurl}}/code/components/custom_button">custom_button.dart</a>
-│   └── <a href="{{site.baseurl}}/code/components/custom_card">custom_card.dart</a>
-│   ├── <a href="{{site.baseurl}}/code/components/custom_button">custom_button.dart</a>
+│   └── <a href="{{site.baseurl}}/code/components/home_progress_indicator">home_progress_indicator.dart</a>
+│   ├── <a href="{{site.baseurl}}/code/components/text_click">text_click.dart</a>
 ├── models/
 │   ├── <a href="{{site.baseurl}}/code/models/users">users.dart</a>
 ├── utils/

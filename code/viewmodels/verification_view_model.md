@@ -1,5 +1,3 @@
-# VerificationViewModel Documentation
-
 The `VerificationViewModel` class is responsible for managing the state and logic of the email verification screen in a Flutter application. It extends `ChangeNotifier` for state management and handles email verification processes.
 
 ## Properties

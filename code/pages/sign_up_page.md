@@ -1,5 +1,3 @@
-# **SignUpPage**
-
 ## **Constructor**
 - **Name:** SignUpPage
 - **Parameters:**

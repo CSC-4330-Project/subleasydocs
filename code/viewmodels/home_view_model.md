@@ -1,5 +1,3 @@
-# HomeViewModel Documentation
-
 The `HomeViewModel` class is responsible for managing the state and logic of the home screen in a Flutter application. It extends `ChangeNotifier` for state management and handles user authentication status and sign-out functionality.
 
 ## Properties

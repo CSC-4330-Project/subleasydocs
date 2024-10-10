@@ -1,7 +1,3 @@
-
-
-# SignUpViewModel Documentation
-
 The `SignUpViewModel` class is responsible for managing the state and logic of the sign-up screen in a Flutter application. It extends `ChangeNotifier` for state management and handles user registration.
 
 ## Properties

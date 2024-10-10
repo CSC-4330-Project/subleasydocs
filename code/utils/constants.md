@@ -1,5 +1,3 @@
-# ComfortableColors Class Documentation
-
 The `ComfortableColors` class defines a set of color constants for use in a Flutter application. These colors create a warm, comfortable color scheme.
 
 ## Color Constants

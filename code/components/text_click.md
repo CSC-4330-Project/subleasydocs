@@ -1,4 +1,3 @@
-
 ## **Constructor**
 - **Name:** TextClick
 - **Parameters:**

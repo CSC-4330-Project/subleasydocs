@@ -1,4 +1,3 @@
-# **VerificationPage**
 
 ## **Constructor**
 - **Name:** VerificationPage

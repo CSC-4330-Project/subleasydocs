@@ -1,35 +1,9 @@
 title: Subleasy Documentation
-# description: >- # this means to ignore newlines until "baseurl:"
-#   This is the official documentation site for Subleasy! 
-baseurl: "/subleasydocs" # the subpath of your site, e.g. /blog
-url: "https://csc-4330-project.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-
-# Build settings
+baseurl: "/subleasydocs"
+url: "https://csc-4330-project.github.io"
 theme: minima
 plugins:
   - jekyll-feed
-
-
-# Specify additional CSS files to include
 sass:
   sass_dir: _sass
   style: compressed
-
-# List of CSS files to include
-css_files:
-  - "assets/css/main.css"
-  - "assets/css/main.css.map"
-
-
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/

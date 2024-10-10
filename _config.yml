@@ -1,4 +1,4 @@
-title: Subleasy Documentation
+title: Subleasy Documentation 
 baseurl: "/subleasydocs"  # Ensure this matches your repository name.
 url: "https://csc-4330-project.github.io"  # This is your GitHub Pages base URL.
 theme: minima

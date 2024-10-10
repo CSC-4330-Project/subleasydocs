@@ -1,4 +1,3 @@
-## Class: TextClick
 
 ## **Constructor**
 - **Name:** TextClick

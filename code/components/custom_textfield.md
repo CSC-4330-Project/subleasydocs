@@ -1,4 +1,3 @@
-# **CustomTextField**
 
 ## **Constructor**
 - **Name:** CustomTextField

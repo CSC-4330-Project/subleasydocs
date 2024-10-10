@@ -2,8 +2,6 @@
 layout: page
 ---
 
-# Subleasing App Architecture Documentation
-
 ## 1. Overview
 
 This document outlines the architectural design of our Subleasing app. We follow the MVVM (Model-View-ViewModel) architecture pattern to ensure a clean separation of concerns and maintain a scalable, testable codebase.

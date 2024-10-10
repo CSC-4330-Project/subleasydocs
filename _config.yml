@@ -14,6 +14,3 @@ plugins:
 sass:
   sass_dir: _sass
   style: compressed
-
-# Add these configurations to help with paths.
-relative_permalinks: true

@@ -1,5 +1,3 @@
-
-
 # **HomeProgressIndicator**
 
 ## **Constructor**

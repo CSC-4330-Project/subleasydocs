@@ -1,5 +1,5 @@
 
-- **Constructor:** VerificationPage
+### **Constructor:** VerificationPage
 - **Parameters:**
   - `key` (Key?): The widget's key
 
